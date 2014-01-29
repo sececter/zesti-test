@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export CU=/home/xqx/projects/coreutils-6.11/obj-llvm
+KLEE=/home/xqx/projects/zesti-test/zesti/Release+Asserts/bin/klee
+
+
+$KLEE --zest --use-symbex=1 --symbex-for=10 --search=zest --zest-search-heuristic=br --watchdog --max-time=30 --optimize --max-cex-size=0 --zest-continue-after-error=true --output-source=false --no-std-out --output-level=error --use-cex-cache=false ---dump-states-on-halt=false -use-forked-stp --max-stp-time=10 --posix-runtime --libc=uclibc $CU/src/TEMPLATE-EXE.bc ${1+"$@"}
