@@ -9,6 +9,10 @@ Release/
 Release+Asserts/
 Debug/
 Debug+Asserts/
+zesti/Release/
+zesti/Release+Asserts/
+zesti/Debug/
+zesti/Debug+Asserts/
 Output/
 
 cscope.*
